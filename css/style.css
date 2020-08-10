@@ -1,0 +1,143 @@
+*{
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+    font-family: 'Comic Neue', cursive;
+
+}
+body{
+    /* background-image: url('../img/fondo_pop_art.jpg'); */
+    background: linear-gradient(to top, rgb(148, 148, 250), rgb(240, 240, 240));
+    background-size: 2000px 1000px;
+    padding: 150px;
+
+}
+main{
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    max-width: 800px;
+    width: 90%;
+    
+}
+p{
+    font-size: 10px;
+}
+.formulario{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 40px 10px;
+    grid-auto-rows: 38px;
+    grid-template-areas:
+        "name lastname"
+        "email email"
+        "password repeatPass"
+        "calendar      ."       
+        "sexInfo sexInfo"
+        "terms terms";
+    align-items: center;
+    max-height: 1800px;
+    border-radius: 10px;
+    overflow: hidden;
+    padding: 40px;
+}
+
+.form_group-input{
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+.field{
+    width: 100%;
+	background: #fff;
+	border: 3px solid transparent;
+	border-radius: 3px;
+	height: 45px;
+	line-height: 45px;
+	padding: 0 40px 0 10px;
+}
+.form_group{
+    min-width: 335px;
+    max-width: 335px;
+ }
+#group_name{
+    grid-area: name;
+}
+#group_lastname{
+    grid-area: lastname;
+}
+#group_email{
+    grid-area: email;
+}
+#group_password{
+    grid-area: password;
+}
+#group_repeat{
+    grid-area: repeatPass;
+}
+#group_birthday{
+    grid-area: calendar;
+}
+#group_sex{
+    grid-area: sexInfo;
+}
+#group_tc{
+    grid-area: terms;
+}
+
+
+.form_input-error{
+    display: none;
+}
+.form_input-error-activo {
+	display: block;
+}
+
+.form__validate-state{
+    position: absolute;
+	right: 10px;
+	bottom: 15px;
+	z-index: 100;
+	font-size: 16px;
+	opacity: 0;
+}
+.field:focus {
+	border: 3px solid #0075FF;
+	outline: none;
+	box-shadow: 3px 0px 30px rgba(163,163,163, 0.4);
+}
+/* <-- Estilos de validacion --> */
+.form_group-correct:focus{
+    padding: 10px;
+    border: 3px solid #1ed12d;
+    border-radius: 5px;
+}
+.form_group-incorrect:focus{
+    padding: 10px;
+    border: 3px solid #bb2929;
+    border-radius: 5px;
+}
+/* Estilos boton  */
+.form__btn {
+	height: 45px;
+	line-height: 45px;
+	width: 30%;
+	background: rgb(255, 255, 255);
+	color: rgb(41, 39, 39);
+	font-weight: bold;
+	border: none;
+	border-radius: 3px;
+	cursor: pointer;
+	transition: .1s ease all;
+}
+
+
+
+.formulario__validacion-estado {
+	position: absolute;
+	right: 10px;
+	bottom: 15px;
+	z-index: 100;
+	font-size: 16px;
+	opacity: 0;
+}
